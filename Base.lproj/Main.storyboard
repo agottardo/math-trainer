@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dw0-qb-W8V">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="JL5-oZ-KhQ">
+            <objects>
+                <viewController id="dw0-qb-W8V" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uV6-bt-E55"/>
+                        <viewControllerLayoutGuide type="bottom" id="suJ-sQ-Om9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdH-kF-3B4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="© 2016 Attiguo Labs. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBE-Sc-5I5">
+                                <rect key="frame" x="127" y="559" width="346" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U6R-ws-WFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-0W-BMh">
+                                <rect key="frame" x="201" y="168.5" width="199" height="263"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="83logowhite" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-0n-u7I">
+                                        <rect key="frame" x="20" y="20" width="159" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UcS-0n-u7I" secondAttribute="height" multiplier="159:130" id="ED9-RS-4HA"/>
+                                            <constraint firstAttribute="width" constant="159" id="YFx-Yz-Bbd"/>
+                                            <constraint firstAttribute="height" constant="130" id="ZXJ-zJ-Pba"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-d2-New">
+                                        <rect key="frame" x="0.0" y="158" width="199" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="rkV-nL-xOz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                        <state key="normal" title="Play Now!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="B5C-4H-1nw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsW-HQ-25o">
+                                        <rect key="frame" x="0.0" y="196" width="199" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jLq-hC-u1V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                        <state key="normal" title="Market">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="I5Q-NQ-8UU" kind="modal" id="Soc-vQ-d10"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3m-yr-bwI">
+                                        <rect key="frame" x="0.0" y="234" width="199" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8bJ-vg-fjz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                        <state key="normal" title="Game Center">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showLeaderboard:" destination="dw0-qb-W8V" eventType="touchUpInside" id="NMs-Sj-dDZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UcS-0n-u7I" firstAttribute="top" secondItem="Wcy-0W-BMh" secondAttribute="top" constant="20" id="2E3-AU-hxD"/>
+                                    <constraint firstAttribute="width" constant="199" id="3Pn-49-83c"/>
+                                    <constraint firstItem="UcS-0n-u7I" firstAttribute="leading" secondItem="Wcy-0W-BMh" secondAttribute="leading" constant="20" id="6CF-FM-wve"/>
+                                    <constraint firstItem="gUF-d2-New" firstAttribute="top" secondItem="UcS-0n-u7I" secondAttribute="bottom" constant="8" symbolic="YES" id="9P8-2o-ncd"/>
+                                    <constraint firstItem="CsW-HQ-25o" firstAttribute="top" secondItem="gUF-d2-New" secondAttribute="bottom" constant="8" id="P4D-vP-BFd"/>
+                                    <constraint firstItem="y3m-yr-bwI" firstAttribute="top" secondItem="CsW-HQ-25o" secondAttribute="bottom" constant="8" id="UVn-1t-mkf"/>
+                                    <constraint firstItem="CsW-HQ-25o" firstAttribute="centerX" secondItem="UcS-0n-u7I" secondAttribute="centerX" id="Uvy-Nj-oTe"/>
+                                    <constraint firstAttribute="height" constant="263" id="jlS-0k-XWE"/>
+                                    <constraint firstItem="gUF-d2-New" firstAttribute="centerX" secondItem="UcS-0n-u7I" secondAttribute="centerX" id="oDj-um-72w"/>
+                                    <constraint firstItem="y3m-yr-bwI" firstAttribute="centerX" secondItem="UcS-0n-u7I" secondAttribute="centerX" id="yLD-VE-C43"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wcy-0W-BMh" firstAttribute="centerY" secondItem="tdH-kF-3B4" secondAttribute="centerY" id="NJx-o1-66Z"/>
+                            <constraint firstItem="Wcy-0W-BMh" firstAttribute="centerX" secondItem="tdH-kF-3B4" secondAttribute="centerX" id="VyP-WF-Ssg"/>
+                            <constraint firstItem="BBE-Sc-5I5" firstAttribute="centerX" secondItem="tdH-kF-3B4" secondAttribute="centerX" id="XTx-S5-cfq"/>
+                            <constraint firstAttribute="bottom" secondItem="BBE-Sc-5I5" secondAttribute="bottom" constant="20" symbolic="YES" id="jQp-wI-ABq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyrightText" destination="BBE-Sc-5I5" id="Nl0-oK-Gtc"/>
+                        <outlet property="gameCButton" destination="y3m-yr-bwI" id="2CR-In-Jgy"/>
+                        <outlet property="logo" destination="UcS-0n-u7I" id="ujr-OK-OfP"/>
+                        <outlet property="playButton" destination="gUF-d2-New" id="pLs-qv-rmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prr-8j-eKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="408"/>
+        </scene>
+        <!--Market View Controller-->
+        <scene sceneID="9FK-oD-i2o">
+            <objects>
+                <viewController id="I5Q-NQ-8UU" customClass="MarketViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fyM-zV-UIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Pn-Zu-iap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Oo-k3-uRF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNo-nz-bwQ">
+                                <rect key="frame" x="20" y="28" width="560" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="MVf-hf-6pk"/>
+                                </constraints>
+                                <string key="text">Welcome to the Market! Here you can buy wildcards to improve your high-scores. Remember you also get 10 wildcards for free every Monday. (Open the market to receive them!)</string>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-Q6-NfP">
+                                <rect key="frame" x="20" y="201" width="560" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="VHS-P4-Yn1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="+25 @ (EUR 0.99)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buy25Pressed:" destination="I5Q-NQ-8UU" eventType="touchUpInside" id="ebh-qP-Wtv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ki-oH-1j9">
+                                <rect key="frame" x="20" y="232" width="560" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Z7s-fq-Exp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="+100 @ (EUR 1.99)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buy100Pressed:" destination="I5Q-NQ-8UU" eventType="touchUpInside" id="WBm-Oz-AxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-g3-1t1">
+                                <rect key="frame" x="20" y="323" width="560" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="ntL-lF-CkI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="Remove all ads @ (EUR 2.99)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAdsPressed:" destination="I5Q-NQ-8UU" eventType="touchUpInside" id="JOX-D4-pAq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Buy more wildcards:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p33-f2-HUV">
+                                <rect key="frame" x="20" y="172" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZXb-en-zty"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You don't like ads?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-so-0mc">
+                                <rect key="frame" x="20" y="294" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cq8-EA-ZVZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="WSG-Xe-Y83"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Now you have:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0W-bT-IOV">
+                                <rect key="frame" x="20" y="79" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zCw-0w-uML"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adD-nI-kJr">
+                                <rect key="frame" x="228" y="108" width="145" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFB-oh-PGl">
+                                        <rect key="frame" x="0.0" y="8" width="79" height="40"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="43"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="wildcards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nM-NJ-9wc">
+                                        <rect key="frame" x="87" y="20" width="58" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="QfE-wS-VXT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8nM-NJ-9wc" firstAttribute="top" secondItem="adD-nI-kJr" secondAttribute="top" constant="20" id="0KV-yg-yNR"/>
+                                    <constraint firstItem="8nM-NJ-9wc" firstAttribute="leading" secondItem="PFB-oh-PGl" secondAttribute="trailing" constant="8" symbolic="YES" id="E9E-rI-TWF"/>
+                                    <constraint firstItem="PFB-oh-PGl" firstAttribute="leading" secondItem="adD-nI-kJr" secondAttribute="leading" id="Tpz-H8-bzF"/>
+                                    <constraint firstItem="PFB-oh-PGl" firstAttribute="centerY" secondItem="8nM-NJ-9wc" secondAttribute="centerY" id="UJz-3b-h6L"/>
+                                    <constraint firstAttribute="height" constant="56" id="ame-eO-CY7"/>
+                                    <constraint firstItem="PFB-oh-PGl" firstAttribute="bottom" secondItem="adD-nI-kJr" secondAttribute="bottomMargin" id="cCA-GR-urz"/>
+                                    <constraint firstAttribute="trailing" secondItem="8nM-NJ-9wc" secondAttribute="trailing" id="fZs-Zn-Yqz"/>
+                                    <constraint firstItem="PFB-oh-PGl" firstAttribute="top" secondItem="adD-nI-kJr" secondAttribute="topMargin" id="i4b-px-pDY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="333-Ji-ElX">
+                                <rect key="frame" x="20" y="263" width="560" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="c47-uQ-pMZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="+500 @ (EUR 4.99)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buy500Pressed:" destination="I5Q-NQ-8UU" eventType="touchUpInside" id="LpS-Yb-F7b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-Hu-lNs">
+                                <rect key="frame" x="20" y="557" width="560" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="cTU-d5-JaX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="Go back to the main menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackPressed:" destination="I5Q-NQ-8UU" eventType="touchUpInside" id="xa9-Xn-ueK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ki-oH-1j9" firstAttribute="top" secondItem="6ek-Q6-NfP" secondAttribute="bottom" constant="8" symbolic="YES" id="2iY-ED-crF"/>
+                            <constraint firstItem="f0W-bT-IOV" firstAttribute="centerX" secondItem="adD-nI-kJr" secondAttribute="centerX" id="3P7-qT-Cnk"/>
+                            <constraint firstItem="adD-nI-kJr" firstAttribute="top" secondItem="f0W-bT-IOV" secondAttribute="bottom" constant="8" symbolic="YES" id="4wM-Dk-siS"/>
+                            <constraint firstItem="HNo-nz-bwQ" firstAttribute="leading" secondItem="f0W-bT-IOV" secondAttribute="leading" id="5A0-ch-ZoL"/>
+                            <constraint firstItem="cGK-so-0mc" firstAttribute="trailing" secondItem="EIY-g3-1t1" secondAttribute="trailing" id="5fQ-pi-eOZ"/>
+                            <constraint firstItem="cGK-so-0mc" firstAttribute="leading" secondItem="EIY-g3-1t1" secondAttribute="leading" id="5tp-gX-uH2"/>
+                            <constraint firstItem="333-Ji-ElX" firstAttribute="leading" secondItem="cGK-so-0mc" secondAttribute="leading" id="7gc-tc-dNI"/>
+                            <constraint firstItem="1ki-oH-1j9" firstAttribute="trailing" secondItem="333-Ji-ElX" secondAttribute="trailing" id="BUL-ua-IiC"/>
+                            <constraint firstItem="p33-f2-HUV" firstAttribute="trailing" secondItem="6ek-Q6-NfP" secondAttribute="trailing" id="Dsv-y6-HVT"/>
+                            <constraint firstItem="6ek-Q6-NfP" firstAttribute="trailing" secondItem="1ki-oH-1j9" secondAttribute="trailing" id="GKS-Qc-Zd2"/>
+                            <constraint firstItem="6ek-Q6-NfP" firstAttribute="top" secondItem="p33-f2-HUV" secondAttribute="bottom" constant="8" symbolic="YES" id="GXU-XJ-Xtd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AHc-Hu-lNs" secondAttribute="leading" id="HWq-Qt-mWk"/>
+                            <constraint firstItem="p33-f2-HUV" firstAttribute="top" secondItem="adD-nI-kJr" secondAttribute="bottom" constant="8" symbolic="YES" id="L9Z-Dt-jKx"/>
+                            <constraint firstItem="p33-f2-HUV" firstAttribute="leading" secondItem="6ek-Q6-NfP" secondAttribute="leading" id="Ngs-sq-VRa"/>
+                            <constraint firstItem="HNo-nz-bwQ" firstAttribute="leading" secondItem="6Oo-k3-uRF" secondAttribute="leadingMargin" id="P5r-JQ-ZIN"/>
+                            <constraint firstItem="333-Ji-ElX" firstAttribute="top" secondItem="1ki-oH-1j9" secondAttribute="bottom" constant="8" symbolic="YES" id="RBG-tJ-gMi"/>
+                            <constraint firstItem="HNo-nz-bwQ" firstAttribute="trailing" secondItem="f0W-bT-IOV" secondAttribute="trailing" id="RXp-N9-wf0"/>
+                            <constraint firstItem="6ek-Q6-NfP" firstAttribute="leading" secondItem="1ki-oH-1j9" secondAttribute="leading" id="Tkl-Lx-eg7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AHc-Hu-lNs" secondAttribute="trailing" id="VDd-yH-X6z"/>
+                            <constraint firstItem="cGK-so-0mc" firstAttribute="top" secondItem="333-Ji-ElX" secondAttribute="bottom" constant="8" symbolic="YES" id="Z8S-qG-Eru"/>
+                            <constraint firstItem="f0W-bT-IOV" firstAttribute="top" secondItem="HNo-nz-bwQ" secondAttribute="bottom" constant="8" symbolic="YES" id="blP-Wy-Iez"/>
+                            <constraint firstItem="f0W-bT-IOV" firstAttribute="trailing" secondItem="p33-f2-HUV" secondAttribute="trailing" id="cx2-xP-hZU"/>
+                            <constraint firstItem="1Pn-Zu-iap" firstAttribute="top" secondItem="AHc-Hu-lNs" secondAttribute="bottom" constant="20" id="gU7-sD-OZ6"/>
+                            <constraint firstItem="HNo-nz-bwQ" firstAttribute="top" secondItem="fyM-zV-UIa" secondAttribute="bottom" constant="8" symbolic="YES" id="h1T-6w-rdp"/>
+                            <constraint firstItem="1ki-oH-1j9" firstAttribute="leading" secondItem="333-Ji-ElX" secondAttribute="leading" id="jtg-Wm-ylP"/>
+                            <constraint firstItem="HNo-nz-bwQ" firstAttribute="trailing" secondItem="6Oo-k3-uRF" secondAttribute="trailingMargin" id="lzd-fG-4bC"/>
+                            <constraint firstItem="f0W-bT-IOV" firstAttribute="leading" secondItem="p33-f2-HUV" secondAttribute="leading" id="o0Y-CQ-7WF"/>
+                            <constraint firstItem="333-Ji-ElX" firstAttribute="trailing" secondItem="cGK-so-0mc" secondAttribute="trailing" id="seC-b8-cKF"/>
+                            <constraint firstItem="EIY-g3-1t1" firstAttribute="top" secondItem="cGK-so-0mc" secondAttribute="bottom" constant="8" symbolic="YES" id="wV3-JM-wgH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buy100" destination="1ki-oH-1j9" id="sAc-eK-ne0"/>
+                        <outlet property="buy25" destination="6ek-Q6-NfP" id="2OS-qU-Gee"/>
+                        <outlet property="buy500" destination="333-Ji-ElX" id="prh-8R-djC"/>
+                        <outlet property="removeAdsButton" destination="EIY-g3-1t1" id="Poa-wW-UkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2UZ-sq-t2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="1171"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-oT-eJT">
+                                <rect key="frame" x="66" y="20" width="100" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="owZ-QG-Px7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-Cy-a5J">
+                                <rect key="frame" x="20" y="34" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3dB-HD-u7R"/>
+                                    <constraint firstAttribute="width" constant="38" id="yRJ-Lg-42f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="82" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-TO-z1l">
+                                <rect key="frame" x="536" y="20" width="44" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="9sg-YA-uIZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time remaining:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-du-9tw">
+                                <rect key="frame" x="427" y="34" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="ah3-uS-ImZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 + 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pra-Za-7gw">
+                                <rect key="frame" x="241" y="194" width="119" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="PMj-EB-LwK"/>
+                                    <constraint firstAttribute="height" constant="59" id="VYF-7H-QJA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atS-Md-SrG">
+                                <rect key="frame" x="277" y="261" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="75o-V7-QW3"/>
+                                    <constraint firstAttribute="height" constant="30" id="9cC-09-bQ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressFirstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcT-NP-h5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q35-Ic-A2N">
+                                <rect key="frame" x="277" y="306" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y7t-QZ-obd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7R-wR-6hg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44b-gG-dvb">
+                                <rect key="frame" x="277" y="351" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fiy-0n-U2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressThirdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMt-4G-WXA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zps-dJ-SLi">
+                                <rect key="frame" x="277" y="396" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uJw-wY-oBn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressFourthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="am9-NB-4cc"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2n-ul-zU9">
+                                <rect key="frame" x="0.0" y="77" width="600" height="427"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-8h-eFC">
+                                        <rect key="frame" x="200" y="206" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="GFe-e6-U67"/>
+                                            <constraint firstAttribute="width" constant="200" id="gbf-EK-S6d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Dfl-8h-eFC" firstAttribute="centerX" secondItem="p2n-ul-zU9" secondAttribute="centerX" id="4AD-Yv-uMh"/>
+                                    <constraint firstItem="Dfl-8h-eFC" firstAttribute="top" secondItem="p2n-ul-zU9" secondAttribute="top" constant="206" id="vgK-ed-PGC"/>
+                                </constraints>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="77" width="400" height="427"/>
+                                </variation>
+                            </view>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-AE-w8m">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YVu-Yl-ahp"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-40" y="550" width="480" height="50"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ndY-zb-Vhg"/>
+                                </connections>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-d9-2Dh">
+                                <rect key="frame" x="257" y="512" width="86" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="kYn-Qr-lLo"/>
+                                    <constraint firstAttribute="height" constant="19" id="vIi-7P-WxD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <state key="normal" title="Quit Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressQuitGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1GO-eC-e2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="44b-gG-dvb" firstAttribute="trailing" secondItem="zps-dJ-SLi" secondAttribute="trailing" id="4YQ-Kf-tN9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cfO-AE-w8m" secondAttribute="bottom" id="CCD-KO-dgs"/>
+                            <constraint firstItem="GKE-Cy-a5J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="Cvu-cl-w1y"/>
+                            <constraint firstItem="GKE-Cy-a5J" firstAttribute="firstBaseline" secondItem="BUK-du-9tw" secondAttribute="firstBaseline" id="EMs-1U-fph"/>
+                            <constraint firstItem="atS-Md-SrG" firstAttribute="leading" secondItem="q35-Ic-A2N" secondAttribute="leading" id="FOi-3T-07L"/>
+                            <constraint firstItem="44b-gG-dvb" firstAttribute="top" secondItem="q35-Ic-A2N" secondAttribute="bottom" constant="15" id="Gh8-ZS-R3E"/>
+                            <constraint firstItem="wfR-TO-z1l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hby-Dp-zkh"/>
+                            <constraint firstItem="GKE-Cy-a5J" firstAttribute="centerY" secondItem="T6K-oT-eJT" secondAttribute="centerY" id="KOW-RS-MbJ"/>
+                            <constraint firstItem="p2n-ul-zU9" firstAttribute="top" secondItem="T6K-oT-eJT" secondAttribute="bottom" constant="8" symbolic="YES" id="Odc-SZ-xV9"/>
+                            <constraint firstItem="zps-dJ-SLi" firstAttribute="centerX" secondItem="y8f-d9-2Dh" secondAttribute="centerX" id="RNJ-1N-WI2"/>
+                            <constraint firstAttribute="trailing" secondItem="p2n-ul-zU9" secondAttribute="trailing" id="Rp1-Y4-JUS"/>
+                            <constraint firstItem="pra-Za-7gw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="174" id="T19-Bb-Wed"/>
+                            <constraint firstItem="GKE-Cy-a5J" firstAttribute="baseline" secondItem="BUK-du-9tw" secondAttribute="baseline" id="XKE-v8-qwb"/>
+                            <constraint firstItem="atS-Md-SrG" firstAttribute="top" secondItem="pra-Za-7gw" secondAttribute="bottom" constant="8" symbolic="YES" id="Xrn-nK-Cox"/>
+                            <constraint firstItem="T6K-oT-eJT" firstAttribute="leading" secondItem="GKE-Cy-a5J" secondAttribute="trailing" constant="8" symbolic="YES" id="YTp-Mq-UsO"/>
+                            <constraint firstItem="cfO-AE-w8m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVk-o4-1MD"/>
+                            <constraint firstItem="zps-dJ-SLi" firstAttribute="top" secondItem="44b-gG-dvb" secondAttribute="bottom" constant="15" id="bY3-58-MIH"/>
+                            <constraint firstItem="T6K-oT-eJT" firstAttribute="baseline" secondItem="wfR-TO-z1l" secondAttribute="baseline" id="eTh-7v-Rce"/>
+                            <constraint firstItem="wfR-TO-z1l" firstAttribute="leading" secondItem="BUK-du-9tw" secondAttribute="trailing" constant="3" id="hiD-WG-gnv"/>
+                            <constraint firstItem="44b-gG-dvb" firstAttribute="leading" secondItem="zps-dJ-SLi" secondAttribute="leading" id="iSQ-8Y-vLV"/>
+                            <constraint firstItem="p2n-ul-zU9" firstAttribute="centerX" secondItem="q35-Ic-A2N" secondAttribute="centerX" id="iuX-kf-xLa"/>
+                            <constraint firstItem="q35-Ic-A2N" firstAttribute="leading" secondItem="44b-gG-dvb" secondAttribute="leading" id="k16-NI-UhD"/>
+                            <constraint firstItem="q35-Ic-A2N" firstAttribute="top" secondItem="atS-Md-SrG" secondAttribute="bottom" constant="15" id="kRh-ll-WBo"/>
+                            <constraint firstItem="T6K-oT-eJT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lBy-dr-8BI"/>
+                            <constraint firstItem="T6K-oT-eJT" firstAttribute="firstBaseline" secondItem="wfR-TO-z1l" secondAttribute="firstBaseline" id="m1O-Lt-8dK"/>
+                            <constraint firstItem="y8f-d9-2Dh" firstAttribute="top" secondItem="zps-dJ-SLi" secondAttribute="bottom" constant="86" id="qh3-bG-yPe"/>
+                            <constraint firstItem="q35-Ic-A2N" firstAttribute="trailing" secondItem="44b-gG-dvb" secondAttribute="trailing" id="sDS-CL-l0Z"/>
+                            <constraint firstItem="p2n-ul-zU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tMe-g9-q6S"/>
+                            <constraint firstItem="GKE-Cy-a5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="txm-4l-WnZ"/>
+                            <constraint firstItem="atS-Md-SrG" firstAttribute="trailing" secondItem="q35-Ic-A2N" secondAttribute="trailing" id="vnU-hQ-v5Q"/>
+                            <constraint firstItem="pra-Za-7gw" firstAttribute="centerX" secondItem="atS-Md-SrG" secondAttribute="centerX" id="ymb-cc-dr0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answer1" destination="atS-Md-SrG" id="9jB-E7-A6U"/>
+                        <outlet property="answer2" destination="q35-Ic-A2N" id="OC9-F1-esI"/>
+                        <outlet property="answer3" destination="44b-gG-dvb" id="m4s-L3-fgX"/>
+                        <outlet property="answer4" destination="zps-dJ-SLi" id="Ua2-ge-r0b"/>
+                        <outlet property="countdownView" destination="wfR-TO-z1l" id="eb4-gg-50Z"/>
+                        <outlet property="gameoverView" destination="p2n-ul-zU9" id="CkS-70-M1f"/>
+                        <outlet property="questionBox" destination="pra-Za-7gw" id="ea7-DV-ID6"/>
+                        <outlet property="scoreLabel" destination="T6K-oT-eJT" id="dHl-uR-He6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="83logowhite" width="243" height="200"/>
+    </resources>
+</document>
